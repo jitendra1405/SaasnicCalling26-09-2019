@@ -1,4 +1,4 @@
-const adjs = [
+/*const adjs = [
   'autumn', 'hidden', 'bitter', 'misty', 'silent', 'empty', 'dry', 'dark',
   'summer', 'icy', 'delicate', 'quiet', 'white', 'cool', 'spring', 'winter',
   'patient', 'twilight', 'dawn', 'crimson', 'wispy', 'weathered', 'blue',
@@ -32,4 +32,4 @@ module.exports = () => {
   const abc = 'saasnic';
  return `${adj}-${noun}-${num}`;
   
-};
+};*/
