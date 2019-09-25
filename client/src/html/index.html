@@ -8,10 +8,9 @@
 function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "none") {
-    x.style.display = "none";
-  } else {
-    
     x.style.display = "block";
+  } else {
+    x.style.display = "none";
   }
 }
 </script>
@@ -43,10 +42,7 @@ function login() {
 const username = $("#ipUsername").val();
 const password = $("#ipPassword").val();
 $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
-if (status === 'success')
-alert(`Login success\n${data}`);
-else
-alert("Login denied");
+
 });
 }
 </script>
