@@ -4,8 +4,19 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
-
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+  <div id="myDIV">
 <body>
+  
 <nav class="navbar-header">
 <span class="navbar-brand">
 <img src="${require(`../assets/saasnic-logo-1.png`)}" /> SaaSnic VideoCall
@@ -16,7 +27,7 @@
 
 
 </body>
-
+  </div>
 
 
 
@@ -50,7 +61,7 @@ alert("Login denied");
 <input id="ipPassword" size="40" type="password">
 <br>
 <br>
-<button type="submit">Login</button>
+<button type="submit" onclick="myFunction()">Login</button>
 </form>
 
 </body>
