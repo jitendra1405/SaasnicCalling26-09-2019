@@ -1,5 +1,30 @@
+<!---------- workinh show and hide but without modall---->
 <!DOCTYPE html>
 <html>
+
+<script>
+
+function showhide() {
+var e = document.getElementById('uniquename');
+var ef = document.getElementById('un');
+e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
+}
+
+</script>
+
+
+
+
+
+<a href="javascript:showhide()">
+Click to show/hide.
+</a>
+
+
+
+<div id="uniquename" style="display:none;">
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, user-scalable=no" />
@@ -8,14 +33,18 @@
 <body>
 <nav class="navbar-header">
 <span class="navbar-brand">
-<img src="${require(`../assets/saasnic-logo-1.png`)}" /> SaaSnic VideoCall
+<img src="${require(`../assets/icon1.png`)}" /> React VideoCall
 </span>
 </nav>
 
 <div id="root"></div>
 
 
-</body>
+</body> 
+
+
+</div>
+
 
 
 
@@ -24,22 +53,30 @@
 
 
 <head>
+
+
+<!--<meta http-equiv="Refresh" content="5; url=re.html">-->
+
+
+
+
 <title>Simple login</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 function login() {
 const username = $("#ipUsername").val();
 const password = $("#ipPassword").val();
-$.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
-if (status === 'success')
-alert(`Login success\n${data}`);
-else
-alert("Login denied");
+$.post("https://webrtcccccc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
+
 });
 }
 </script>
 </head>
 
+
+
+
+<div id="un">
 <body>
 <h1>Sign in</h1>
 <form onsubmit="login()">
@@ -54,5 +91,5 @@ alert("Login denied");
 </form>
 
 </body>
-
+</div>
 </html>
