@@ -2,17 +2,7 @@
 <!DOCTYPE html>
 <html>
 
- <script>
-    
-    function showhide() {
-       	var e = document.getElementById('uniquename');
-      var ef = document.getElementById('un');
-       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
-     }
-    
-    </script>
-    
+ 
        	  
    
 
@@ -58,6 +48,14 @@
   <title>Simple login</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>
+    
+    $.when($.ajax(login())).then(function () {
+
+    showhide;
+
+});
+    
+    
     function login() {
       const username = $("#ipUsername").val();
       const password = $("#ipPassword").val();
@@ -65,6 +63,20 @@
         
       });
     }
+    
+    
+    function showhide() {
+       	var e = document.getElementById('uniquename');
+      var ef = document.getElementById('un');
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
+     }
+    
+    
+    
+    
+    
+    
   </script>
 </head>
 
