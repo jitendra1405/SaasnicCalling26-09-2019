@@ -1,35 +1,95 @@
+<!---------- workinh show and hide but without modall---->
+<!DOCTYPE html>
+<html>
+  
+  <script>
+    
+    function showhide() {
+       	var e = document.getElementById('uniquename');
+      var ef = document.getElementById('un');
+       	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        ef.style.display = (ef.style.display == 'block') ? 'block' : 'none';
+     }
+    
+    </script>
+    
+    
+    
 
+  
+  <a href="javascript:showhide()">
+    		Click to show/hide.
+    	</a>
+  
+  
+  
+<div id="uniquename" style="display:none;">
 
+  <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
 
+<body>
+	<nav class="navbar-header">
+		<span class="navbar-brand">
+		<img src="${require(`../assets/saasnic-logo-1.png`)}" /> SaaSnic VideoCall
+		</span>
+	</nav>
+
+	<div id="root"></div>
+  
+ 
+</body>  
+  
+
+  </div>
+  
+  
+  
 
 
 
 
 
 <head>
-<title>Simple login</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-function login() {
-const username = $("#ipUsername").val();
-const password = $("#ipPassword").val();
-$.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
-});
-}
-</script>
+  
+  
+  <!--<meta http-equiv="Refresh" content="5; url=re.html">-->
+  
+  
+  
+  
+  <title>Simple login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    function login() {
+      const username = $("#ipUsername").val();
+      const password = $("#ipPassword").val();
+      $.post("https://saasnicwebrtc.herokuapp.com/login", { username: username, password: password }, (data, status) => {
+        
+      });
+    }
+  </script>
 </head>
+
+
+  
+  
+<div id="un">
 <body>
-<h1>Sign in</h1>
-<form onsubmit="login()">
-<label for="ipUsername">Username:</label>
-<input id="ipUsername" size="40" autocomplete="off">
-<br>
-<label for="ipPassword">Password:</label>
-<input id="ipPassword" size="40" type="password">
-<br>
-<br>
-<button type="submit">Login</button>
-</form>
-  <a href="./Redirect.html" title="About Me">About Me</a>
+  <h1>Sign in</h1>
+  <form onsubmit="login()">
+    <label for="ipUsername">Username:</label>
+    <input id="ipUsername" size="40" autocomplete="off">
+    <br>
+    <label for="ipPassword">Password:</label>
+    <input id="ipPassword" size="40" type="password">
+    <br>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+
 </body>
+  </div>
 </html>
